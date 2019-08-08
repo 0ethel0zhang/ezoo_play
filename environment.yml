@@ -1,0 +1,11 @@
+dependencies:
+ - python
+ - numpy
+ - scipy
+ - scikit-learn
+ - jupyter
+ - requests
+ - click
+ - pip:
+   - spotipy
+   - python-dotenv
