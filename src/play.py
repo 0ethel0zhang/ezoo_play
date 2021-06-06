@@ -16,6 +16,7 @@ username = os.getenv("user_name")
 cid = os.getenv("client_id")
 secret = os.getenv("client_secret")
 redirect = os.getenv("redirect_uri")
+playlist_name = os.getenv("playlist_name")
 
 """Get artists"""
 file = open("../data/artists.txt","r") 
@@ -24,7 +25,7 @@ file.close()
 
 """Get Spotify Access"""
 """create a log for errors"""
-logger = logging.getLogger('ezooplaylist')
+logger = logging.getLogger(playlist_name.lower().replace(" ", "_"))
 hdlr = logging.FileHandler('playlists.log')
 formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
 hdlr.setFormatter(formatter)
@@ -74,13 +75,13 @@ def get_top_songs_for_artist(artist, song_count=5):
 playlists = sp.user_playlists(username)
 
 for p in playlists['items']:
-    if p['name'] == 'Electric Zoo 2019':
+    if p['name'] == playlist_name:
         p_id = p['id']
         
 if not 'p_id' in globals():
-    sp.user_playlist_create(username, "Electric Zoo 2019")
+    sp.user_playlist_create(username, playlist_name)
     for p in playlists['items']:
-        if p['name'] == 'Electric Zoo 2019':
+        if p['name'] == playlist_name:
             p_id = p['id']
 
 """Get existing songs if there are"""
@@ -106,4 +107,4 @@ all_songs_len = len(all_track_ids)
 sp.user_playlist_add_tracks(user=username, 
                             playlist_id=p_id, 
                             tracks=all_track_ids[:min(api_track_add_limit, all_songs_len)])
-logger.info("Finished adding {} songs.".format(min(api_track_add_limit, all_songs_len))
+logger.info("Finished adding {} songs.".format(min(api_track_add_limit, all_songs_len)))
