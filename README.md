@@ -28,7 +28,7 @@ However, the code can be easily adapted to add top songs for any list of artists
 	`export client_id = "whatever"`<br>
 	`export client_secret = "whatever"`<br>
 	`export redirect_uri = "whatever"`<br>
-	`export playlist_name = "whatever"
+	`export playlist_name = "whatever"`
 
 5. To run the main program:
 
