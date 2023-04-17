@@ -19,7 +19,7 @@ redirect = os.getenv("redirect_uri")
 playlist_name = os.getenv("playlist_name")
 
 """Get artists"""
-file = open("../data/artists.txt","r") 
+file = open("data/artists.txt","r") 
 u_artists = [x.replace("\n", "") for x in file.readlines()]
 file.close() 
 
