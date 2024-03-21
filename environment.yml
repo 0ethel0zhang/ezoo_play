@@ -1,5 +1,7 @@
+name: nameyoulike
+channels:
+  - defaults
 dependencies:
- - python
  - numpy
  - scipy
  - scikit-learn
