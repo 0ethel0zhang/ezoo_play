@@ -16,7 +16,7 @@ However, the code can be easily adapted to add top songs for any list of artists
 
 2. Create a virtual environment running the following command in command line (Replace the NAMEYOULIKE part with whatever name you want to call your virtual environment):
 
-  `conda create -f environment.yml -n NAMEYOULIKE`
+  `conda env create -f environment.yml -n NAMEYOULIKE`
 
 3. Activate the environment using:
 
@@ -35,6 +35,9 @@ However, the code can be easily adapted to add top songs for any list of artists
   `python src/play.py`
   
   Follow any instructions that is prompted in the command line. (The only one should be a spotify verification step that requires you to copy the address of the pop-up website.)
+
+  `conda deactivate`
+  When you are done.
   
 ## Conclusion
 After everything finished running, **Viola**, you have a playlist called the one specified as playlist_name with Top songs from all artists in your list!
