@@ -7,6 +7,13 @@ However, the code can be easily adapted to add top songs for any list of artists
 
 ## Instructions:
 
+Prerequisite2: 
+
+1. Set up a Web API with Spotify for devlopers. (https://developer.spotify.com/documentation/web-api)
+2. Update the list of artists in `data/artists.txt` if you want your own list of artists.
+
+Once you have a Spotify API set up, you can proceed with the following.
+
 1. Copy this repository:
 
   `git clone https://github.com/0ethel0zhang/ezoo_play.git`
@@ -28,7 +35,8 @@ However, the code can be easily adapted to add top songs for any list of artists
 	`export client_id = "whatever"`<br>
 	`export client_secret = "whatever"`<br>
 	`export redirect_uri = "whatever"`<br>
-	`export playlist_name = "whatever"`
+	`export playlist_name = "whatever"`<br>
+	`export num_songs = "whatever"`
 
 5. To run the main program:
 
