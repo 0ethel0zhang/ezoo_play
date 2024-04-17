@@ -7,12 +7,14 @@ However, the code can be easily adapted to add top songs for any list of artists
 
 ## Instructions:
 
-Prerequisite2: 
+### Prerequisites: 
 
 1. Set up a Web API with Spotify for devlopers. (https://developer.spotify.com/documentation/web-api)
 2. Update the list of artists in `data/artists.txt` if you want your own list of artists.
 
 Once you have a Spotify API set up, you can proceed with the following.
+
+### Step-by-step:
 
 1. Copy this repository:
 
