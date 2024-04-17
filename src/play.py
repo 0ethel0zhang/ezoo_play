@@ -17,6 +17,7 @@ cid = os.getenv("client_id")
 secret = os.getenv("client_secret")
 redirect = os.getenv("redirect_uri")
 playlist_name = os.getenv("playlist_name")
+song_count = os.getenv("num_songs")
 
 """Get artists"""
 file = open("data/artists.txt","r") 
@@ -95,7 +96,7 @@ if len(e_lst['tracks']['items']) > 0:
 api_track_add_limit = 100
 all_track_ids = []
 for current_artist in u_artists:
-    top_song_limit_per_artist = 4
+    top_song_limit_per_artist = song_count
     top_artist_songs = get_top_songs_for_artist(current_artist, top_song_limit_per_artist)
     if 'exist_song_ids' in globals():
         all_track_ids.extend([x for x in top_artist_songs if x not in exist_song_ids])
